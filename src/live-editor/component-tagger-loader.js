@@ -420,11 +420,11 @@ function componentTagger(src, map) {
                     (!isNextImageAlias(imageAliases, semanticName.split('-')[0]) &&
                         !shouldTag(semanticName)))
                     return;
-                const { line, column } = node.loc.start;
-                let orchidsId = `${rel}:${line}:${column}`;
+                               const { line, column } = node.loc.start;
+                let liveId = `${rel}:${line}:${column}`;
                 // Enhance the ID with context if we have map information
                 if (mapContext) {
-                    orchidsId += `@${mapContext.arrayName}`;
+                    liveId += `@${mapContext.arrayName}`;
                 }
                 // 🔍 Append referenced variable locations for simple identifier references in props
                 (_a = node.attributes) === null || _a === void 0 ? void 0 : _a.forEach((attr) => {
@@ -435,7 +435,7 @@ function componentTagger(src, map) {
                         const refName = attr.value.expression.name;
                         const varInfo = variables.get(refName);
                         if (varInfo) {
-                            orchidsId += `@${refName}`;
+                            liveId += `@${refName}`;
                         }
                     }
                 });
@@ -443,7 +443,7 @@ function componentTagger(src, map) {
                 if (mapContext === null || mapContext === void 0 ? void 0 : mapContext.indexVarName) {
                     ms.appendLeft(node.name.end, ` data-map-index={${mapContext.indexVarName}}`);
                 }
-                ms.appendLeft(node.name.end, ` data-orchids-id="${orchidsId}" data-orchids-name="${semanticName}"`);
+                ms.appendLeft(node.name.end, ` data-live-id="${liveId}" data-live-name="${semanticName}"`);
                 mutated = true;
             },
         });
@@ -458,3 +458,4 @@ function componentTagger(src, map) {
         done(err);
     }
 }
+

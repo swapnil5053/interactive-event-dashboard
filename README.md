@@ -1,3 +1,4 @@
+
 # Designare OS – Simple Conference Frontend Demo
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
