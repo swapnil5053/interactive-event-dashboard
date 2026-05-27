@@ -73,7 +73,7 @@ To guarantee high-speed local developer checkouts without external SaaS subscrip
 
 ---
 
-## 🗂️ Project Directory Trees
+## Project Directory Trees
 
 ```
 src/
