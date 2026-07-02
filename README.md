@@ -1,5 +1,5 @@
 
-# Designare OS – Simple Conference Frontend Demo
+# Conference Dashboard — Interactive Event Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.3-black?style=flat-square&logo=nextdotjs)](https://nextjs.org)
@@ -7,7 +7,7 @@
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-emerald?style=flat-square&logo=lighthouse)](https://github.com/GoogleChrome/lighthouse)
 
-**Designare OS** is a simple frontend demonstration of a conference website, showcasing modern UI components, animations, and routing without backend services. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
+**Conference Dashboard** is a simple frontend demonstration of a conference website, showcasing modern UI components, animations, and routing without backend services. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
 
 ---
 
@@ -52,7 +52,7 @@ The platform enforces strict Role-Based Access Control at three distinct boundar
 | `attendee` | Personal calendar bookmarks, digital passes | `/agenda`, `/pass` |
 
 ### 2. Local-First Infrastructure Adapters
-To guarantee high-speed local developer checkouts without external SaaS subscriptions, Designare OS operates pluggable adapters:
+To guarantee high-speed local developer checkouts without external SaaS subscriptions, Conference Dashboard operates pluggable adapters:
 - **Local Payment Adapter**: Abstracts ticket sales and checkout token generation. Integrates a drop-in ready interface for direct Stripe SDK migrations.
 - **Client-Side Event Transport**: A client-side event bus managing occupancy swings and live operations updates. Swaps seamlessly with WebSockets or Server-Sent Events (SSE).
 - **Development Authentication Provider**: Simulates session state caching inside local storage, exposing instant switcher buttons to let reviewers audit role permissions immediately.
