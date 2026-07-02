@@ -5,7 +5,7 @@
 [![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-0.44-lime?style=flat-square&logo=drizzle)](https://orm.drizzle.team)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 
-**Conference Dashboard** is a full-stack demonstration of a conference website, showcasing modern UI components, animations, and routing backed by a local SQLite database. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
+**Conference Dashboard** is a full-stack demonstration of a conference website, with modern UI components, animations, and routing backed by a local SQLite database. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
 
 ---
 
@@ -49,7 +49,7 @@ The platform enforces strict Role-Based Access Control at three distinct boundar
 ### 2. Local-First Infrastructure Adapters
 To guarantee high-speed local developer checkouts without external SaaS subscriptions, Conference Dashboard operates pluggable adapters:
 - **Local Payment Adapter**: Abstracts ticket sales and checkout token generation. Integrates a drop-in ready interface for direct Stripe SDK migrations.
-- **Client-Side Event Transport**: A client-side event bus managing occupancy swings and live operations updates. Swaps seamlessly with WebSockets or Server-Sent Events (SSE).
+- **Client-Side Event Transport**: A client-side event bus managing occupancy swings and live operations updates. Can be swapped with WebSockets or Server-Sent Events (SSE).
 - **Development Authentication Provider**: Simulates session state caching inside local storage, exposing instant switcher buttons to let reviewers audit role permissions immediately.
 
 ### 3. Agenda Engine & Overlap Detector
