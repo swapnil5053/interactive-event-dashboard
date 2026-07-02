@@ -20,7 +20,7 @@
 
 ## Design Highlights
 
-![Screenshot of Home Page](public/Screenshot%202026-05-27%20103648.png)
+![Screenshot of Home Page](public/home.png)
 - **Elements Design**: 3D canvas built with React Three Fiber featuring hover- and scroll-reactive particle systems.
 - **Glassmorphism**: Translucent container backgrounds with UI blur.
 - **Dynamic Gradients**: Light-to-dark gradient backgrounds.
@@ -30,7 +30,7 @@
 
 ## Implementation Notes
 
-![Conference Overview](public/image.png)
+![Conference Overview](public/overview.png)
 
 ### 1. Multi-Role RBAC & Security Guards
 The platform enforces strict Role-Based Access Control at three distinct boundaries:
