@@ -1,13 +1,11 @@
-
 # Conference Dashboard — Interactive Event Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.3-black?style=flat-square&logo=nextdotjs)](https://nextjs.org)
 [![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-0.44-lime?style=flat-square&logo=drizzle)](https://orm.drizzle.team)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-emerald?style=flat-square&logo=lighthouse)](https://github.com/GoogleChrome/lighthouse)
 
-**Conference Dashboard** is a simple frontend demonstration of a conference website, showcasing modern UI components, animations, and routing without backend services. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
+**Conference Dashboard** is a full-stack demonstration of a conference website, showcasing modern UI components, animations, and routing backed by a local SQLite database. It provides a sponsor portal for lead capture and booth configuration, a schedule view, personal agenda, digital passes, and an FAQ/help area.
 
 ---
 
@@ -23,19 +21,16 @@
 ## Design Highlights
 
 ![Screenshot of Home Page](public/Screenshot%202026-05-27%20103648.png)
-- **Elements Design**: The homepage features a 3‑D element canvas built with React Three Fiber, showcasing interactive particle systems that respond to hover and scroll.
-- **Glassmorphism**: Containers use translucent backgrounds with subtle blur for a premium feel.
-- **Dynamic Gradients**: Light‑to‑dark gradient backgrounds create depth and visual interest.
-- **Micro‑animations**: Framer Motion adds smooth hover, scroll, and transition effects throughout the UI.
+- **Elements Design**: 3D canvas built with React Three Fiber featuring hover- and scroll-reactive particle systems.
+- **Glassmorphism**: Translucent container backgrounds with UI blur.
+- **Dynamic Gradients**: Light-to-dark gradient backgrounds.
+- **Micro-animations**: Framer Motion hover, scroll, and layout transition effects.
 
+---
 
-
-## Deep Engineering Focus
-
+## Implementation Notes
 
 ![Conference Overview](public/image.png)
-
-
 
 ### 1. Multi-Role RBAC & Security Guards
 The platform enforces strict Role-Based Access Control at three distinct boundaries:
@@ -69,7 +64,7 @@ To guarantee high-speed local developer checkouts without external SaaS subscrip
 
 ### 5. WebGL Element Canvas (Three.js + R3F)
 - Hover-reactive particle system representing Element tracks (Air, Water, Fire, Earth) floating dynamically inside landing hero containers.
-- Lazily hydrated on client viewport boundaries to maintain perfect Lighthouse metrics and page speed loads.
+- Lazily hydrated on client viewport boundaries to maintain performance metrics.
 
 ---
 
@@ -111,7 +106,7 @@ src/
    ```
 
 3. **Seed Database records**:
-   Populates Stages, relatonial Session tracks, Speakers, Sponsors, and default accounts.
+   Populates Stages, relational Session tracks, Speakers, Sponsors, and default accounts.
    ```bash
    npx tsx src/db/seed.ts
    ```
